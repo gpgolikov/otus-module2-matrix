@@ -89,8 +89,8 @@ private:
         }
 
         matrix_accessor&& operator= (T v) && {
-            if (v == Def) {
-                if (value_ != Def)
+            if (v == DefV) {
+                if (value_ != DefV)
                     matrix_.buffer_.erase(index_);
             } else {
                 matrix_.buffer_.insert_or_assign(index_, v);

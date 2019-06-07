@@ -1,6 +1,4 @@
 #include <iostream>
-#include <vector>
-#include <list>
 #include <tuple>
 
 #include "matrix.h"
