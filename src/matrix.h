@@ -44,7 +44,7 @@ private:
 
         matrix_accessor(Matrix& m, middle_index_type idx) 
             : matrix_(m)
-            , index_(std::move(idx)) {}
+            , index_(idx) {}
 
         matrix_accessor(const matrix_accessor&) = delete;
         matrix_accessor& operator= (const matrix_accessor&) = delete;
@@ -68,7 +68,7 @@ private:
     public:
         matrix_accessor(Matrix& m, index_type idx)
             : matrix_(m)
-            , index_(std::move(idx)) {
+            , index_(idx) {
             
             auto it = matrix_.buffer_.find(index_);
             if (it != matrix_.buffer_.end())
